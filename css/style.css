@@ -1,0 +1,181 @@
+/** ====== Rest ====== **/
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;700;900&display=swap');
+
+:root {
+	/*========== Colors ==========*/
+	--colorMessage: ;
+
+	/*========== Font and typography ==========*/
+	/* 1rem = 10px */
+	--first-font: 'Poppins', sans-serif;
+	--second-font: ;
+
+	/*========== Font weight ==========*/
+	--font-bold: 700;
+	--font-medium: 500;
+	--font-regular: 400;
+
+	/*========== z-index ==========*/
+	--z-top: 10;
+	--z-bottom: -10;
+	--z-fixed: 100;
+}
+
+/** ====== Globals ====== **/
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+	font-family: var(--first-font);
+	font-size: 16px; /* 1rem = 10px */
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container-all {
+	position: relative;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	background: rgb(49, 100, 49);
+	background: radial-gradient(circle, rgba(49, 100, 49, 1) 0%, rgba(9, 10, 8, 1) 100%);
+}
+
+/** ====== Header ====== **/
+
+.header {
+	box-shadow: 0px 0px 10px black;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: var(--z-fixed);
+	color: white;
+	background-color: rgb(7, 6, 6);
+	height: 6rem;
+	display: grid;
+	place-content: center;
+}
+
+/** ====== Main ====== **/
+
+.main {
+	display: flex;
+	gap: 5rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttons {
+	display: flex;
+	gap: 2rem;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+	background-color: rgba(10, 22, 10, 0.623);
+	padding: 1.5rem 2rem;
+	border-radius: 2rem;
+}
+
+.buttons button {
+	cursor: pointer;
+	color: rgb(0, 0, 0);
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 0.2rem;
+	font-family: 'Poiret One', cursive;
+	transition: all 0.2s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+#rest {
+	background: rgb(255, 255, 111);
+	background: linear-gradient(150deg, rgba(255, 255, 111, 1) 0%, rgba(91, 90, 32, 1) 100%);
+}
+
+#add {
+	background: rgb(111, 161, 255);
+	background: linear-gradient(150deg, rgba(111, 161, 255, 1) 0%, rgba(32, 52, 91, 1) 100%);
+}
+
+#stop {
+	background: rgb(255, 111, 111);
+	background: linear-gradient(150deg, rgba(255, 111, 111, 1) 0%, rgba(91, 32, 32, 1) 100%);
+}
+
+.player {
+	color: rgb(15, 15, 15);
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	height: 30rem;
+}
+
+.player-cards img {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.692);
+	border-radius: 1.3rem;
+	max-width: 15rem;
+	margin-right: -7.5rem;
+}
+
+.player-cards img:first-child {
+	margin-left: -7.5rem;
+}
+
+/* Mensaje Resultados */
+
+.message-results {
+	display: flex;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	font-size: 10rem;
+	font-weight: 700;
+	color: rgb(207, 207, 207);
+	background-color: rgba(0, 0, 0, 0.95);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.521);
+	text-shadow: 0px 0px 10px;
+}
+
+/** ====== Footer ====== **/
+
+.footer {
+	box-shadow: 0px 0px 10px black;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: var(--z-fixed);
+	color: white;
+	background-color: rgb(7, 6, 6);
+	height: 6rem;
+	display: grid;
+	place-content: center;
+}
